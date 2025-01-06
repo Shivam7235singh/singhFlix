@@ -3,7 +3,7 @@ import ContactCard from "../Components/ContactCard";
 const Contact = () => {
   return (
     <>
-    <h1>this my contact page </h1>
+    <h1>Contact Us</h1>
     <ContactCard/>
     </>
   ) 
