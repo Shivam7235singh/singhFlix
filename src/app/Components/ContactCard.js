@@ -1,36 +1,41 @@
-import React from 'react'
-import styles from '@/app/styles/common.module.css'
-import Image from 'next/image'
+import React from 'react';
+import styles from '@/app/contact/contact.module.css';
+import { MdEmail, MdVoiceChat, MdForum} from 'react-icons/md';
+import Link from 'next/link';
 
-const ContactCard = ({props}) => {
-    
-    const {title, description, imageUrl, id} = props;
+const ContactCard = () => {
   return (
-    <div>
-        <div className={styles.card}>
-            <div className={styles.card_image}>
-                <Image src={} alt='card_image' fill/>
-                <div className={styles.card_title}>
-                    <h2>
-                        {title}
-                    </h2>
+     <div className={styles.section}>
+        <div className={styles.container}>
+            <div className={styles.grid}>
+                 <div className={styles.grid_card}>
+                        <i> <MdEmail /> </i>
+                        <h2>Email</h2>
+                        <p>Monday to Friday Expected </p>
+                        <p className={styles.last_para}>response time: 72 hours </p>
+                        <Link href="/">  Send Email <span>-&gt;</span></Link>
+                    </div>
 
-                </div>
-                <div className={styles.card_description}>
-                    <p>
-                        {description}
-                    </p>
-                </div>
-                <div className={styles.card_btn}>
-                    <button >
+                    <div className={styles.grid_card}>
+                        <i> <MdVoiceChat /> </i>
+                        <h2>Live Chat</h2>
+                        <p>Weekdays: 9 AM — 6 PM ET</p>
+                        <p className={styles.last_para}>Weekends: 9 AM — 5 PM ET </p>
+                        <Link href="/" >  Chat Now <span>-&gt;</span></Link>
+                    </div>
 
-                    </button>
-                </div>
-
+                    <div className={styles.grid_card}>
+                        <i> <MdForum /> </i>
+                        <h2>Community Forum</h2>
+                        <p>Monday to Friday Expected </p>
+                        <p className={styles.last_para}>response time: 72 hours </p>
+                        <Link href="/" className={styles.anchorLink}>  Ask The Community <span>-&gt;</span></Link>
+                    </div>
             </div>
         </div>
-    </div>
+     </div>
   )
-}
+   
+};
 
-export default ContactCard
+export default ContactCard;
